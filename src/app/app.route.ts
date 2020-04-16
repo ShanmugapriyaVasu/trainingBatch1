@@ -5,6 +5,5 @@ import { LoginSection } from './auth/login/login.component';
 
 export const appRoute: Routes = [
   { path: 'login', component: LoginSection },
-  { path: '', component: AppComponent },
-  { path: '', redirectTo: '', pathMatch: "full" }
+  { path: '', redirectTo: 'login', pathMatch: "full" }
 ]

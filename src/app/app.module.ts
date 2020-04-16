@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { appRoutes } from './app.route';
+import { appRoute } from './app.route';
 
 import { AppComponent } from './app.component';
 import { LoginSection } from './auth/login/login.component';
@@ -12,7 +12,7 @@ import { LoginSection } from './auth/login/login.component';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot (appRoutes)
+    RouterModule.forRoot (appRoute)
   ],
   declarations: [
     AppComponent,
