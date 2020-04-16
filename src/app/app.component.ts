@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: '<router-outlet></router-outlet>'
 })
 export class AppComponent  {
-  name = 'Angular';
+  name = 'Training Batch 1';
 }
