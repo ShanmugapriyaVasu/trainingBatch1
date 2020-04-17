@@ -1,5 +1,8 @@
 ## Angular training
 
+# Summary
+This project is developed in angular for training purpose ony.
+
 # Participants
 - Raghavan Ravi Chandran
 - Shanmugapriya Vasu
