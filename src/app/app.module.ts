@@ -7,7 +7,7 @@ import { appRoute } from './app.route';
 
 import { AppComponent } from './app.component';
 import { LoginSection } from './auth/login/login.component';
-import { Dashboard } from './auth/dashboard/dashboard.component';
+import { Dashboard } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
