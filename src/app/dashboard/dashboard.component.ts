@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   
   template: `Dashboard Template`
 })
-export class Dashboard { }
+export class DashboardSection { }

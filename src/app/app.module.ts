@@ -7,7 +7,7 @@ import { appRoute } from './app.route';
 
 import { AppComponent } from './app.component';
 import { LoginSection } from './auth/login/login.component';
-import { Dashboard } from './dashboard/dashboard.component';
+import { DashboardSection } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -18,7 +18,7 @@ import { Dashboard } from './dashboard/dashboard.component';
   declarations: [
     AppComponent,
     LoginSection,
-    Dashboard
+    DashboardSection
   ],
   bootstrap: [ AppComponent ]
 })
