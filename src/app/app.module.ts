@@ -18,7 +18,7 @@ import { DashboardSection } from './dashboard/dashboard.component';
   ],
   declarations: [
     AppComponent,
-    LoginSection,
+    LoginSection, SignupSection,
     DashboardSection
   ],
   bootstrap: [ AppComponent ]
