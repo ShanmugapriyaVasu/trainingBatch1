@@ -1,6 +1,21 @@
-import { Component } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 
 @Component ({
-  template: `Login Template`
+  templateUrl: `./login.component.html`,
+  styleUrls: ['./login.component.css']
 })
-export class LoginSection { }
+export class LoginSection implements OnInit{ 
+
+  constructor () {  }
+
+  ngOnInit() {
+   
+  }
+
+  loginUser(a) {
+  	var username = a.target.elements[0].value;
+  	var password = a.target.elements[1].value;
+    console.log(a);
+  }
+  
+}
