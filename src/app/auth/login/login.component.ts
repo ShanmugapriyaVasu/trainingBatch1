@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component ({
   templateUrl: `./login.component.html`,
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginSection implements OnInit{ 
   loginForm: FormGroup;
