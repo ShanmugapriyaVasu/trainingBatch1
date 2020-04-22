@@ -1,6 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { AuthService } from '../../sharedServices/services/auth.service';
+
 @Component ({
   templateUrl: `./login.component.html`,
   styleUrls: ['./login.component.scss']
@@ -8,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginSection implements OnInit{ 
   loginForm: FormGroup;
 
-  constructor (private formBuilder: FormBuilder) { 
+  constructor (private formBuilder: FormBuilder, private authService: AuthService) { 
     //
   }
 
@@ -20,6 +22,10 @@ export class LoginSection implements OnInit{
   }
 
   loginUser (event: any) {
-    console.log (event);
+    const eventObj = {
+      "email": event.username,
+      "password": event.password
+    }
+    this.authService.getLoginDetails (eventObj);
   }
 }

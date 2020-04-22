@@ -13,6 +13,8 @@ import { LoginSection } from './auth/login/login.component';
 import { SignupSection } from './auth/signup/signup.component';
 import { DashboardSection } from './dashboard/dashboard.component';
 
+import { AuthService } from './sharedServices/services/auth.service';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { DashboardSection } from './dashboard/dashboard.component';
     LoginSection, SignupSection,
     DashboardSection
   ],
+  providers: [ AuthService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
