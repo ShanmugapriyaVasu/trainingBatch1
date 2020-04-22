@@ -11,8 +11,8 @@ export class UserService {
     //
   }
 
-  getUserDetails (data: any) {
-    this.USER_DETAILS = this.http.get ('https://reqres.in/api/unknown/2', data);
+  getUserDetails () {
+    this.USER_DETAILS = this.http.get ('https://reqres.in/api/unknown/2');
 
     const userDetails = new Subject ();
 
