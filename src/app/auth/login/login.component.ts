@@ -16,8 +16,8 @@ export class LoginSection implements OnInit{
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group ({
-      username: ['', [Validators.required]],
-      password: ['', [Validators.required, Validators.minLength (4)]]
+      username: ['eve.holt@reqres.in', [Validators.required]],
+      password: ['cityslicka', [Validators.required, Validators.minLength (4)]]
     });
   }
 
@@ -26,6 +26,6 @@ export class LoginSection implements OnInit{
       "email": event.username,
       "password": event.password
     }
-    this.authService.getLoginDetails (eventObj);
+    this.authService.getLoginDetails (eventObj).subscribe ();
   }
 }

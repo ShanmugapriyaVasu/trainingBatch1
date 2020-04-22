@@ -1,17 +1,25 @@
 import { Injectable } from '@angular/core'; 
 import { HttpClient } from '@angular/common/http';
 
+import { Subject } from 'rxjs';
+
 @Injectable ()
 export class AuthService {
-  login_details: any;
+  LOGIN_TOKEN: any;
 
   constructor (private http: HttpClient) {
     //
   }
 
   getLoginDetails (data: any) {
-    console.log (data);
-    // this.login_details = this.http.post ('https://reqres.in/api/login', data);
-    // return this.login_details;
+    this.LOGIN_TOKEN = this.http.post ('https://reqres.in/api/login', data);
+
+    const loginDetails = new Subject ();
+
+    setTimeout (() => {
+      loginDetails.next (this.LOGIN_TOKEN);
+      loginDetails.complete ();
+    }, 100);
+    return this.LOGIN_TOKEN;
   }
 }
