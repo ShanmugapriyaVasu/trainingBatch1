@@ -14,9 +14,8 @@ export class DashboardSection implements OnInit {
   }
 
   ngOnInit () {
-    this.userService.getUserDetails ().subscribe ((data: any) => {
-      this.userInfo = data;
-      console.log (this.userInfo);
+    this.userService.getUserDetails ().subscribe ((result: any) => {
+      this.userInfo = result.data;
     });
   }
 }

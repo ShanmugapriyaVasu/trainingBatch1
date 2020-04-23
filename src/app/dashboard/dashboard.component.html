@@ -23,7 +23,23 @@
       <div class="panel-head">
         Details
       </div>
-    <div class="panel-body"></div>
+    <div class="panel-body">
+      <div class="user-details-wrapper">
+        <div>
+          <img src="{{ userInfo?.avatar }}" alt="User" height="80px" />
+        </div>
+        <div class="user-info">
+          <p>
+            <span>Firstname: </span>
+            <span>{{ userInfo?.first_name }}</span>
+          </p>
+          <p>
+            <span>Lastname: </span>
+            <span>{{ userInfo?.last_name }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
     </div>
     <div class="panel-wrapper">
       <div class="panel-head">

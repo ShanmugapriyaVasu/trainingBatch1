@@ -8,3 +8,12 @@ $sandbox-warn: mat-palette($mat-red);
 $sandbox-theme: mat-light-theme($sandbox-primary, $sandbox-accent, $sandbox-warn);
 
 @include angular-material-theme($sandbox-theme);
+
+// User Details Section
+.user-details-wrapper {
+  display: flex;
+}
+.user-info {
+  margin-left: 50px !important;
+  font-size: 1.5rem;
+}

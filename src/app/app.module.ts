@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { StorageServiceModule } from 'ngx-webstorage-service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterial } from './angular.material';
@@ -20,7 +19,7 @@ import { UserService } from './sharedServices/services/users.service';
 
 @NgModule({
   imports: [
-    BrowserModule, StorageServiceModule,
+    BrowserModule,
     FormsModule, HttpClientModule, ReactiveFormsModule, BrowserAnimationsModule, AngularMaterial,
     RouterModule.forRoot (appRoute)
   ],

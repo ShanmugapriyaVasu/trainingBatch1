@@ -12,7 +12,7 @@ export class UserService {
   }
 
   getUserDetails () {
-    this.USER_DETAILS = this.http.get ('https://reqres.in/api/unknown/2');
+    this.USER_DETAILS = this.http.get ('https://reqres.in/api/users/2');
 
     const userDetails = new Subject ();
 
