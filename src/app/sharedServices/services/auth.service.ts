@@ -1,11 +1,13 @@
-import { Injectable } from '@angular/core'; 
+import { Inject,Injectable } from '@angular/core'; 
 import { HttpClient } from '@angular/common/http';
+
 
 import { Subject } from 'rxjs';
 
 @Injectable ()
 export class AuthService {
   LOGIN_TOKEN: any;
+  Login = 'key';
 
   constructor (private http: HttpClient) {
     //
@@ -21,5 +23,6 @@ export class AuthService {
       loginDetails.complete ();
     }, 100);
     return this.LOGIN_TOKEN;
+    
   }
 }

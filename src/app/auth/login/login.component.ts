@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AuthService } from '../../sharedServices/services/auth.service';
 
+import { Router } from "@angular/router";
+
 @Component ({
   templateUrl: `./login.component.html`,
   styleUrls: ['./login.component.scss']
@@ -10,7 +12,7 @@ import { AuthService } from '../../sharedServices/services/auth.service';
 export class LoginSection implements OnInit{ 
   loginForm: FormGroup;
 
-  constructor (private formBuilder: FormBuilder, private authService: AuthService) { 
+  constructor (private formBuilder: FormBuilder, private authService: AuthService, private router: Router) { 
     //
   }
 
@@ -26,6 +28,11 @@ export class LoginSection implements OnInit{
       "email": event.username,
       "password": event.password
     }
-    this.authService.getLoginDetails (eventObj).subscribe ();
+    const value = {}
+    this.authService.getLoginDetails (eventObj).subscribe ((data: any) => { 
+      localStorage.setItem('token', data.token);
+      this.router.navigate(['dashboard'])
+    }) ;
+  
   }
 }
